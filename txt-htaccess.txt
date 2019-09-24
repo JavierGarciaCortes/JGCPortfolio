@@ -1,0 +1,1 @@
+ErrorDocumento 404 /404error.html
