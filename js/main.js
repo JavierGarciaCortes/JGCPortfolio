@@ -6,7 +6,7 @@ var day = fecha.getDay();
 var hour = fecha.getHours();
 var mywebs = ["Jeongye's Academy", "WPlanner", "Hotel del Oso"];
 var myapps = ["My Fun List"];
-var nopress=setTimeout(function(){ document.getElementById("talking").innerHTML = "Click on me for continue";}, 7000);
+var nopress=setInterval(function(){ meclick1();}, 4000);
 
 function inicio() {
     meclick1();
@@ -16,7 +16,7 @@ function meclick1() {
 	document.getElementById("cloudback").style.display = 'none';
 	document.getElementById("cloud").style.display = 'none';
 	if (a == 3) {
-        clearTimeout(nopress);
+		clearInterval(nopress);
 		document.getElementById("talking").innerHTML = "Do you want to see my <span id='webs' class='chose' onclick='showWebs()'>WEBS</span> or my <span id='apps' class='chose' onclick='showApps()'>APPS</span>?";
 	}
 	if (a == 2) {
@@ -24,7 +24,6 @@ function meclick1() {
 		a++;
 	}
 	if (a == 1) {
-        clearTimeout(nopress);
 		switch (day) {
 			case 1:
 				document.getElementById("talking").innerHTML = "Happy Monday!<br>";
