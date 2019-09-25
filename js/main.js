@@ -57,7 +57,7 @@ function meclick1() {
 		a++;
 	}
     if (a == 0) {
-		document.getElementById("talking").innerHTML = "Wellcome to my portfolio";
+		document.getElementById("talking").innerHTML = "Welcome to my portfolio";
 		a++;
 	}
 

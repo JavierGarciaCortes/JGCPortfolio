@@ -10,6 +10,8 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <script type="text/javascript" src="js/main2.js"></script>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <style>
@@ -20,9 +22,33 @@
         body {
             Background: #fffff1;
         }
+		/* Me y burbujas de dialogos */
+		#me{display: none;}
+		#medib {
+			width: 25%;
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		#dialog {
+			background-color: bisque;
+			color: #441c00;
+			padding: 10px;
+			font-size: 4vw;
+			width: 65%;
+			height: auto;
+			text-align: center;
+			border-radius: 60px 60px 0 60px;
+			user-select: none;
+			position: absolute;
+			bottom: 20%;
+		}
+		#talking {
+			padding: 20px;
+		}
 
     </style>
-    <script></script>
 </head>
 
 <body>
@@ -37,7 +63,7 @@
             </div>
         </div>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid" id="main">
         <nav class="navbar navbar-expand-md navbar-light container my-3 rounded bg-dark">
             <a class="navbar-brand text-white" href="index.php">Home</a>
             <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,6 +85,12 @@
        
         <div class="container"><a href="https://play.google.com/store/apps/details?id=com.html6" target="_blank">My Fun List (Google Store)</a><br></div>
     </main>
+    <aside id="me">
+		<div id="dialog">
+			<div id="talking"></div>
+		</div>
+		<img id="medib" src="img/MeDib.png" alt="dibujo de Javier García Cortes">
+	</aside>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
