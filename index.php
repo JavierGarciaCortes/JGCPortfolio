@@ -12,11 +12,11 @@ if(isset($_SESSION['contador'])){
 <html lang="es">
 
 <head>
-    <title>JGC Portafolio</title>
+    <title>JGC's Portafolio</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portafolio de Javier Garcia Cortes, Desarrollador Web. Podras ver mis proyectos durante mis estudios y mis trabajos realizados hasta la fecha actual" />
+    <meta name="description" content="JGC's Portfolio, Web developer. You can see my projects during my studies and my work done to date" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
