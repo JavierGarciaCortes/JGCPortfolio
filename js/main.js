@@ -6,18 +6,24 @@ var day = fecha.getDay();
 var hour = fecha.getHours();
 var mywebs = ["Jeongye's Academy", "WPlanner", "Hotel del Oso"];
 var myapps = ["My Fun List"];
-var nopress=setInterval(function(){ meclick1();}, 4000);
+var nopress=setInterval(function(){ meclick1();}, 3000);
 
 function inicio() {
     meclick1();
 	document.getElementById("medib").onclick = meclick1;
 }
 function meclick1() {
-	document.getElementById("cloudback").style.display = 'none';
 	document.getElementById("cloud").style.display = 'none';
-	if (a == 3) {
+	if (a == 4) {
 		clearInterval(nopress);
-		document.getElementById("talking").innerHTML = "Do you want to see my <span id='webs' class='chose' onclick='showWebs()'>WEBS</span> or my <span id='apps' class='chose' onclick='showApps()'>APPS</span>?";
+		document.getElementById("talking").innerHTML = "These are my webs:";
+		for (i = 0; i < mywebs.length; i++) {
+			document.getElementById("talking").innerHTML += `<div class="chose1"><a href="${mywebs[i]}.html">${mywebs[i]}</a></div>`;
+		}
+	}
+	if (a == 3) {
+		document.getElementById("talking").innerHTML = "Do you want to see my WEBS?";
+		a++;
 	}
 	if (a == 2) {
 		document.getElementById("talking").innerHTML = "Anyway... Let's start";
@@ -62,38 +68,14 @@ function meclick1() {
 	}
 
 } 	// Dialogo inicial y menu
-function showWebs() {
-	document.getElementById("talking").innerHTML = "";
-	document.getElementById("cloudback").style.display = 'block';
-	document.getElementById("cloud").style.display = 'block';
-	document.getElementById("cloud").innerHTML = "Webs";
-	for (i = 0; i < mywebs.length; i++) {
-		document.getElementById("talking").innerHTML += `<div class="chose1"><a href="${mywebs[i]}.html">${mywebs[i]}</a></div>`;
-	}
-} 	// Muestra menu webs
-function showApps() {
-	document.getElementById("talking").innerHTML = "";
-	document.getElementById("cloudback").style.display = 'block';
-	document.getElementById("cloud").style.display = 'block';
-	document.getElementById("cloud").innerHTML = "Apps";
-	for (i = 0; i < myapps.length; i++) {
-		document.getElementById("talking").innerHTML += `<div class="chose1"><a href="${myapps[i]}.html">${myapps[i]}</a></div>`;
-	}
-} 	// Muestra menu apps
-function back() {
-	document.getElementById("cloudback").style.display = 'none';
-	document.getElementById("cloud").style.display = 'none';
-	document.getElementById("talking").innerHTML = "Do you want to see my <span id='webs' class='chose' onclick='showWebs()'>WEBS</span> or my <span id='apps' class='chose' onclick='showApps()'>APPS</span>?";
-
-} 		// Vuelve al menu dialogo
 function phone() {
 	if (phonecond == 0) {
+		document.getElementById("cloud").style.display = 'block';
 		document.getElementById("cloud").innerHTML = "call me";
 		document.getElementById("talking").innerHTML = 'My phone number is <br> +34 675614953';
 		phonecond = 1;
 		infocond = 0;
 	} else {
-		document.getElementById("cloudback").style.display = 'none';
 		document.getElementById("cloud").style.display = 'none';
 		meclick1();
 		phonecond = 0;
@@ -101,12 +83,12 @@ function phone() {
 }		// Muestra el telefono
 function sayinfo(){
 	if (infocond == 0) {
+		document.getElementById("cloud").style.display = 'block';
 		document.getElementById("cloud").innerHTML = "about me";
 		document.getElementById("talking").innerHTML = 'My name is Javier García Cortés. I am a web developer. Here you have my <a href="docs/CV%20WEb%20Developer%20en%202.pdf" download>CV</a>';
 		infocond = 1;
 		phonecond = 0;
 	} else {
-		document.getElementById("cloudback").style.display = 'none';
 		document.getElementById("cloud").style.display = 'none';
 		meclick1();
 		infocond = 0;

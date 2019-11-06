@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['contador'])){
-    $_SESSION['contador']=3;
+    $_SESSION['contador']=4;
     
 }else{
     $_SESSION['contador']=0;
@@ -75,29 +75,14 @@ if(isset($_SESSION['contador'])){
             padding: 5px 10px;
             border-radius: 50%;
             text-align: center;
-            font-size: 5vw;
+            font-size: 3vw;
             user-select: none;
             position: absolute;
             top: -20px;
             left: 0px;
             display: none;
         }
-        #cloudback {
-            width: auto;
-            padding: 5px 10px;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 2.4vw;
-            cursor: pointer;
-            user-select: none;
-            position: absolute;
-            top: -15px;
-            right: 0px;
-            display: none;
-        }
-        #cloudback:hover {
-            font-weight: bold;
-        }
+
         a {
             text-decoration: none;
         }
@@ -126,7 +111,7 @@ if(isset($_SESSION['contador'])){
     <header class="container-fluid">
         <div class="container">
             <div class="row d-flex justify-content-end" style="height: 20px">
-                <div class="col-auto pr-1 align-self-center" style="height: 17px;"><img style="width: 17px; cursor: pointer;" src="img/info1.png" alt="Show phone number" onclick="sayinfo()"></div>
+                <div class="col-auto pr-1 align-self-center" style="height: 17px;"><img style="width: 17px; cursor: pointer;" src="img/info1.png" alt="Show info" onclick="sayinfo()"></div>
                 <div class="col-auto pr-1 align-self-center" style="height: 17px;"><img style="width: 17px; cursor: pointer;" src="img/info.png" alt="Show phone number" onclick="phone()"></div>
                 <div class="col-auto pr-1 align-self-center" style="height: 17px;"><a href="mailto:garciacortesjavier@gmail.com"><img style="width: 17px;" class="iconcontact" src="img/sobre.png" alt="send email"></a></div>
                 <div class="col-auto pr-1 align-self-center" style="height: 17px;"><a href="https://www.linkedin.com/in/javiergarciacortes/" target="_blank"><img style="width: 17px;" class="iconcontact" src="img/ln.ico" alt="go to linkedin"></a></div>
@@ -139,7 +124,6 @@ if(isset($_SESSION['contador'])){
             <div id="dialog">
                 <div id="talking"></div>
                 <div id="cloud" class="thinking"></div>
-                <div id="cloudback" class="thinking" onclick="back()">Back</div>
             </div>
             <img id="medib" src="img/MeDib.png" alt="dibujo de Javier García Cortes">
         </aside>
