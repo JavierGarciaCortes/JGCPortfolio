@@ -4,8 +4,7 @@ var infocond = 0;
 var fecha = new Date();
 var day = fecha.getDay();
 var hour = fecha.getHours();
-var mywebs = ["Jeongye's Academy", "WPlanner", "Hotel del Oso"];
-var myapps = ["My Fun List"];
+var mywebs = ["Jeongye's Academy", "WPlanner", "Hotel del Oso", "Leon Cantabro"];
 var nopress=setInterval(function(){ meclick1();}, 3000);
 
 function inicio() {
