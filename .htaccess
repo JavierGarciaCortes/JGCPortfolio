@@ -1,9 +1,5 @@
 RewriteEngine on
 RewriteCond %{HTTPS} !=on [NC]
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-ErrorDocument 404 /404error.html
 
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.jeongyesacademy.es$ [OR]
-RewriteCond %{HTTP_HOST} ^jeongyesacademy.es.es$
-RewriteRule (.*)$ http://www.javiergarciacortes.com/JA/$1 [R=301,L]
+ErrorDocument 404 /404error.html

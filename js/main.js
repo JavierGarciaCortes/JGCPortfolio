@@ -16,9 +16,14 @@ function meclick1() {
 	if (a == 4) {
 		clearInterval(nopress);
 		document.getElementById("talking").innerHTML = "These are my webs:";
-		for (i = 0; i < mywebs.length; i++) {
-			document.getElementById("talking").innerHTML += `<div class="chose1"><a href="${mywebs[i]}.html">${mywebs[i]}</a></div>`;
-		}
+        document.getElementById("talking").innerHTML += `<div class="chose1"><a href="https://jkl.academy.gcj.es/" target="_blank">Jeongye's Academy</a></div>`;
+        document.getElementById("talking").innerHTML += `<div class="chose1"><a href="https://wplanner.gcj.es/" target="_blank">WPlanner</a></div>`;
+        document.getElementById("talking").innerHTML += `<div class="chose1"><a href="https://hoteldeloso.gcj.es" target="_blank">Hotel del Oso</a></div>`;
+        document.getElementById("talking").innerHTML += `<div class="chose1"><a href="http://www.leoncantabro.es/" target="_blank">León Cántabro</a></div>`;
+        document.getElementById("talking").innerHTML += `<div class="chose1"><a href="https://ob.gcj.es/" target="_blank">OurBoard</a></div>`;
+		//for (i = 0; i < mywebs.length; i++) {
+		//	document.getElementById("talking").innerHTML += `<div class="chose1"><a href="${mywebs[i]}.html">${mywebs[i]}</a></div>`;
+		//}
 	}
 	if (a == 3) {
 		document.getElementById("talking").innerHTML = "Do you want to see my WEBS?";
@@ -84,7 +89,7 @@ function sayinfo(){
 	if (infocond == 0) {
 		document.getElementById("cloud").style.display = 'block';
 		document.getElementById("cloud").innerHTML = "about me";
-		document.getElementById("talking").innerHTML = 'My name is Javier García Cortés. I am a web developer. Here you have my <a href="docs/CV%20WEb%20Developer%20en%202.pdf" download>CV</a>';
+		document.getElementById("talking").innerHTML = 'My name is Javier García Cortés. I am a web developer. Here you have my <a href="docs/CV%20WEb%20Developer%20en%202.pdf" download>CV (english version)</a> or <a href="docs/CV%20WEb%20Developer%20en%202ES.pdf" download>CV (spanish version)</a>';
 		infocond = 1;
 		phonecond = 0;
 	} else {
